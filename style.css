@@ -1,0 +1,165 @@
+
+/* importējam fontu */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* background foto imports un stils */
+
+.container{
+    background-image: url(https://i.postimg.cc/SRv9hZWF/christopher-gower-m-HRf-Lhg-ABo-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.black{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top left, rgba(64, 128, 192, 0.7), rgba(64, 128, 192, 0.8));
+    position: absolute;
+    overflow: hidden;
+}
+/* centra texta css (code withs Jurcis) */
+.center{
+    /* testa horizontālais izvietojums */
+    text-align: center;
+    /* texta iecentrēšana vertikāla */
+    position: absolute;
+    width: 100%;
+    /* teksta atstarpe no augšas */
+    top: 35%;
+    color: white;
+}
+
+.center span{
+    color: rgb(5, 5, 5);
+}
+.center h1{
+    font-size: 35px;
+}
+.center p{
+    font-size: 25px;
+}
+
+/* centra pogas dizains */
+.center button{
+    /* papielinam pogu */
+    padding: 3px 20px;
+    /* atstarpe starp textu un pogu */
+    margin-top: 20px;
+    /* pogas krāsa caurspīdīga */
+    background: transparent;
+    /* pogas rāmis */
+    border: 2px solid white;
+    /* texts */
+    color: white;
+    /* fona biezums */
+    font-weight: 600;
+}
+button:hover{
+    color: black;
+    background-color: white;
+}
+
+/* navigācijas bar */
+nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 100;   
+}
+
+/* navigacijas bara virsraksts */
+nav h1{
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    margin-left: 20px;
+}
+
+ul{
+    position: absolute;
+    right: 20px;
+}
+
+li{
+    display: inline;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+a{
+    color: white;
+    /* noņemam svītras zem teksta */
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(48, 51, 54);
+}
+
+/* nav bars mazākiem ekrāniem poga */
+nav .open{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    display: none;
+}
+
+/* nav bar aizveršanas poga */
+nav .close{
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    right: 20px;
+    margin-top: -35px;
+    display: none;
+}
+
+.content{
+    padding: 30px;
+    /* saspiež vienā kolonā */
+    text-align: justify;
+}
+
+.content h1{
+    text-align: center;
+}
+
+@media only screen and (max-width:650px){
+    /* rāmis nav baram */
+    ul{
+        background-color: rgb(104, 163, 187);
+        top: 0px;
+        padding: 40px;
+        right: -200;
+        height: 100vh;
+        transition: 1s;
+    }
+    li{
+        display: block;
+        margin-bottom: 10px;
+    }
+    a{
+        color: white;
+    }
+    nav .open{
+        display: block;
+    }
+    nav .close{
+        display: block;
+    }
+    a:hover{
+        color: blue;
+    }
+
+}
+
+
